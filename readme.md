@@ -2,7 +2,7 @@
 
 Contributers&ensp;·&ensp;[Hunter Larco](http://larcolabs.com)
 
-> Color.js is a class providing basic color functionality ranging from hex to rgb conversions and distinguishable color generation.
+> Color.js is a class providing basic color functionality ranging from hex-rgb conversions to distinguishable color generation.
 
 ## Example
 
