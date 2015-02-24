@@ -1,0 +1,43 @@
+<style>
+div{
+	height:300px;
+	width:300px;
+	display:inline-block;
+	margin:20px;
+}
+</style>
+<script src='../build/color.min.js'></script>
+<script>
+
+window.addEventListener('load', Init);
+
+function AddSwatch(color){
+	var div = document.createElement('div');
+	div.style.background = color.toHex();
+	console.log(color.toRGBString(), color.toHex())
+	document.body.appendChild(div);
+}
+
+function Init() {
+	AddSwatch(new Color());
+	AddSwatch(new Color(255, 0, 0));
+	AddSwatch(new Color([0, 255, 0]));
+	AddSwatch(new Color('#00f'));
+	AddSwatch(new Color('f04ff0'));
+	AddSwatch(new Color({r:255, g:1000}));
+	
+	AddSwatch(Color.random());
+	var rand = Color.smartRandom();
+	AddSwatch(rand);
+	AddSwatch(rand.invert());
+
+	var color = Color.random();
+
+	console.log(color.toHex());
+	console.log(color.toRawHex());
+	console.log(color.toRGB());
+	console.log(color.toRGBArray());
+	console.log(color.distance(new Color()));
+}
+
+</script>

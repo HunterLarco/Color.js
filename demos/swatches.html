@@ -1,0 +1,28 @@
+<style>
+div{
+	height:300px;
+	width:300px;
+	display:inline-block;
+	margin:20px;
+}
+</style>
+<script src='../build/color.min.js'></script>
+<script>
+
+window.addEventListener('load', Init);
+
+function AddSwatch(color){
+	var div = document.createElement('div');
+	div.style.background = color.toHex();
+	document.body.appendChild(div);
+}
+
+var count = 0;
+function Init() {
+	if(count++ == 10) return;
+  requestAnimationFrame(Init);
+	AddSwatch(Color.smartRandom());
+}
+
+
+</script>
